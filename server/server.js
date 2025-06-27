@@ -17,6 +17,9 @@ app.use(express.json());
 // Routes
 app.use('/api', authRoutes);
 app.use('/api/todo', toDoRoutes);
+app.get('/', (req, res) => {
+	res.send('Welcome to the ToDo API');
+});
 
 // Database Connection
 mongoose
